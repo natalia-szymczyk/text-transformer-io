@@ -15,7 +15,7 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
       - name: Build javadocs
         run: mvn javadoc:javadoc
-      - run: mkdir staging && cp target/*.jar staging && mkdir staging/site && cp -r target/site/*
+      - run: mkdir staging && cp target/*.jar staging && mkdir staging/site && cp -r target/site/* staging/site
       - uses: actions/upload-artifact@v2
         with:
           name: Package
