@@ -16,7 +16,7 @@ jobs:
       - name: Build javadocs
         run: mvn javadoc:javadoc
       - run: mkdir staging && cp target/*.jar staging
-      - run: cp target/site/* staging
+      - run: mkdir staging/site ** cp target/site/* staging/site
       - uses: actions/upload-artifact@v2
         with:
           name: Package
