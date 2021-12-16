@@ -13,3 +13,5 @@ jobs:
           cache: maven
       - name: Validate, build and run tests
         run: mvn --batch-mode --update-snapshots verify
+      - name: Build javadocs
+        run: mvn javadoc:javadoc
