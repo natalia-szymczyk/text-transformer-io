@@ -9,7 +9,8 @@ public class UpperTransformer extends Decorator {
         return text.toUpperCase();
     }
 
-    public String transform(String text){
-        return upper(transformer.transform(text));
+    @Override
+    protected String transformation(String text){
+        return this.upper(text);
     }
 }

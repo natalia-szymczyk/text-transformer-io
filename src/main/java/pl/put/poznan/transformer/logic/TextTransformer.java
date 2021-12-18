@@ -1,22 +1,33 @@
 package pl.put.poznan.transformer.logic;
 
-import java.util.Locale;
 
 public class TextTransformer {
     private final String[] transformations;
+    private InterfaceTextTransformer iTransformer;
 
-    public TextTransformer(String[] transforms) {
-        this.transformations = transforms;
+    public TextTransformer(String[] transformations) {
+        this.transformations = transformations;
     }
 
     public String transform(String text) {
-        for (String transformation : transformations) {
+        for (String transformation : this.transformations) {
+            this.iTransformer = new EmptyTextTransformer();
             switch (transformation) {
                 case "upper":
-                    text = upper(text);
+                    iTransformer = new UpperTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
                     break;
                 case "lower":
-                    text = lower(text);
+                    iTransformer = new LowerTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
+                case "reverse":
+                    iTransformer = new ReverseTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
+                case "duplications":
+                    iTransformer = new DuplicationsTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
                     break;
                 default:
                     break;
@@ -24,13 +35,5 @@ public class TextTransformer {
         }
 
         return text;
-    }
-
-    public String upper(String text) {
-        return text.toUpperCase();
-    }
-
-    public String lower(String text) {
-        return text.toLowerCase();
     }
 }
