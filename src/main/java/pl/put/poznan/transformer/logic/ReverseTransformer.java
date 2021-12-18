@@ -1,8 +1,5 @@
 package pl.put.poznan.transformer.logic;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static java.lang.Character.*;
 
 public class ReverseTransformer extends Decorator{

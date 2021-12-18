@@ -33,6 +33,22 @@ public class TextTransformer {
                     iTransformer = new CapitalizeTransformer(iTransformer);
                     text = iTransformer.getTransformation(text);
                     break;
+                case "latex":
+                    iTransformer = new LatexTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
+                case "exp":
+                    iTransformer = new ExpansionTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
+                case "abb":
+                    iTransformer = new AbbreviationTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
+                case "number":
+                    iTransformer = new NumberTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
                 default:
                     break;
             }
