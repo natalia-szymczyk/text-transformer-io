@@ -29,6 +29,10 @@ public class TextTransformer {
                     iTransformer = new DuplicationsTransformer(iTransformer);
                     text = iTransformer.getTransformation(text);
                     break;
+                case "capitalize":
+                    iTransformer = new CapitalizeTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
                 default:
                     break;
             }
