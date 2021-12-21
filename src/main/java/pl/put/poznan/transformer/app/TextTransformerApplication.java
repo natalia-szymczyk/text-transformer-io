@@ -10,9 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication(scanBasePackages = {"pl.put.poznan.transformer.rest"})
 public class TextTransformerApplication {
-    /**
-     * Running application
-     */
     public static void main(String[] args) {
         SpringApplication.run(TextTransformerApplication.class, args);
     }

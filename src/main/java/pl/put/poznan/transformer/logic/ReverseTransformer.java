@@ -4,7 +4,7 @@ import static java.lang.Character.*;
 
 /**
  * Class used to reverse the order of letters in text
- * This transformation is case - sensitive, keeps upper/lower letters case in original position, etc. CaSe -> EsAc
+ * This transformation is case - sensitive, keeps upper/lower letters case in original position, etc. CaSe -&gt EsAc
  */
 public class ReverseTransformer extends Decorator{
 
