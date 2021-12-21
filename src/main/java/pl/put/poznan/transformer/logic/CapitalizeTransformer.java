@@ -6,12 +6,24 @@ import java.util.List;
 
 import static java.lang.Character.*;
 
+/**
+ * Class used to change the first letter to be Capital and all the remaining to be lower case
+ */
 public class CapitalizeTransformer extends Decorator{
 
+    /**
+     * Constructor which is using the Constructor of parent
+     * @param transformer interface class
+     */
     public CapitalizeTransformer(InterfaceTextTransformer transformer) {
         super(transformer);
     }
 
+    /**
+     * Changing input text to be capitalized which means the first letter is upper and remaining are lower case
+     * @param text text to be transformed
+     * @return input text capitalized
+     */
     private String capitalize(String text) {
         List<String> words = new ArrayList<String>(Arrays.asList(text.split(" ")));
         StringBuilder result = new StringBuilder();
@@ -36,6 +48,11 @@ public class CapitalizeTransformer extends Decorator{
         return result.toString();
     }
 
+    /**
+     * Transforming text to be capitalized
+     * @param text text to be transformed
+     * @return transformed capitalized text
+     */
     @Override
     protected String transformation(String text) {
         return this.capitalize(text);
