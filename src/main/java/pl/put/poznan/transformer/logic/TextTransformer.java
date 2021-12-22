@@ -49,6 +49,14 @@ public class TextTransformer {
                     iTransformer = new NumberTransformer(iTransformer);
                     text = iTransformer.getTransformation(text);
                     break;
+                case "polish":
+                    iTransformer = new PolishTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
+                case "line":
+                    iTransformer = new LineTransformer(iTransformer);
+                    text = iTransformer.getTransformation(text);
+                    break;
                 default:
                     break;
             }
