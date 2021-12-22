@@ -13,7 +13,6 @@ public class NumberTransformer extends Decorator{
         List<String> words = new ArrayList<String>(Arrays.asList(text.split(" ")));
         StringBuilder result = new StringBuilder();
 
-        System.out.println("res1" + words);
         int i = 0;
         for (String word : words) {
             try {
@@ -36,21 +35,9 @@ public class NumberTransformer extends Decorator{
                 }
             }
 
-//            if (i == 0) {
-//                result.append(word);
-//            } else {
-//                result.append(" " + word);
-//            }
-
-//            if(word.equals(words.get(0))){
-//                result.append(" " + word);
-//                System.out.println(result);
-//            }
-//
             i++;
         }
 
-        System.out.println("res" + result.toString());
         return result.toString();
     }
 
