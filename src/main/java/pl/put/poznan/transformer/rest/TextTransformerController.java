@@ -12,8 +12,6 @@ public class TextTransformerController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
     public String index() {
-        // TODO: List of available endpoints
-
         return "Index";
     }
 

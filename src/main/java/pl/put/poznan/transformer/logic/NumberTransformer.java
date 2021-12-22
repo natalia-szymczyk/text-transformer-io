@@ -13,21 +13,44 @@ public class NumberTransformer extends Decorator{
         List<String> words = new ArrayList<String>(Arrays.asList(text.split(" ")));
         StringBuilder result = new StringBuilder();
 
+        System.out.println("res1" + words);
+        int i = 0;
         for (String word : words) {
-            try{
+            try {
                 int number = Integer.parseInt(word);
                 word = textNumber(number);
+
+                if (i == 0) {
+                    result.append(word);
+                } else {
+                    result.append(" " + word);
+                }
+
                 System.out.println(number + " -> " + word);
             }
-            catch (NumberFormatException ex){
-                continue;
+            catch (NumberFormatException ex) {
+                if (i == 0) {
+                    result.append(word);
+                } else {
+                    result.append(" " + word);
+                }
             }
 
-            if(word.equals(words.get(0))){
-                result.append(" " + word);
-            }
+//            if (i == 0) {
+//                result.append(word);
+//            } else {
+//                result.append(" " + word);
+//            }
+
+//            if(word.equals(words.get(0))){
+//                result.append(" " + word);
+//                System.out.println(result);
+//            }
+//
+            i++;
         }
 
+        System.out.println("res" + result.toString());
         return result.toString();
     }
 
@@ -70,7 +93,7 @@ public class NumberTransformer extends Decorator{
             case 4:
                 return "czterysta ";
             case 5:
-                return "pięćset";
+                return "pięćset ";
             case 6:
                 return "sześćset ";
             case 7:
@@ -116,50 +139,50 @@ public class NumberTransformer extends Decorator{
             case 0:
                 return "";
             case 1:
-                return "jeden ";
+                return "jeden";
             case 2:
-                return "dwa ";
+                return "dwa";
             case 3:
-                return "trzy ";
+                return "trzy";
             case 4:
-                return "cztery ";
+                return "cztery";
             case 5:
-                return "pięć ";
+                return "pięć";
             case 6:
-                return "sześć ";
+                return "sześć";
             case 7:
-                return "siedem ";
+                return "siedem";
             case 8:
-                return "osiem ";
+                return "osiem";
             case 9:
-                return "dziewięć ";
+                return "dziewięć";
             default:
-                return " ";
+                return "";
         }
     }
 
     private String custom(int number) {
         switch (number) {
             case 11:
-                return "jedenaście ";
+                return "jedenaście";
             case 12:
-                return "dwanaście ";
+                return "dwanaście";
             case 13:
-                return "trzynaście ";
+                return "trzynaście";
             case 14:
-                return "czternaście ";
+                return "czternaście";
             case 15:
-                return "piętnaście ";
+                return "piętnaście";
             case 16:
-                return "szesnaście ";
+                return "szesnaście";
             case 17:
-                return "siedemnaście ";
+                return "siedemnaście";
             case 18:
-                return "osiemnaście ";
+                return "osiemnaście";
             case 19:
-                return "dziewiętnaście ";
+                return "dziewiętnaście";
             default:
-                return " ";
+                return "";
         }
     }
 

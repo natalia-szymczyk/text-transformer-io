@@ -82,9 +82,7 @@ public class ExpansionTransformer extends Decorator{
                 result.append(words.get(i));
             }
 
-            if (i != 0){
-                result.append(" ");
-            }
+            result.append(" ");
         }
 
         return  result.toString();
