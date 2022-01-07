@@ -4,11 +4,30 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class used to expand written shortcuts
+ * given shortcuts ("prof.", "dr", "np.", "itd.", "itp.")
+ */
 public class ExpansionTransformer extends Decorator{
+
+    /**
+     * Constructor which is using the Constructor of parent
+     * @param transformer interface class
+     */
     public ExpansionTransformer(InterfaceTextTransformer transformer) {
         super(transformer);
     }
 
+
+    /**
+     * Expanding all given shortcuts maintaining size of letters:
+     * - all lower in shortcut - all lower in expanded form
+     * - capital letter in shortcut - capitalized expanded form
+     * - all upper in shortcut - all upper in expanded form
+     * - other pattern in shortcut - saved size of letters form shortcut and all the remaining in lower case, ex. AbC -> AbCdef
+     * @param text text to be transformed
+     * @return input text in upper case
+     */
     private String expansion(String text){
         List<String> words = new ArrayList<String>(Arrays.asList(text.split(" ")));
         StringBuilder result = new StringBuilder();
@@ -88,6 +107,11 @@ public class ExpansionTransformer extends Decorator{
         return  result.toString();
     }
 
+    /**
+     * Expanding all given shortcuts
+     * @param text text to be transformed
+     * @return transformed text with expanded shortcuts
+     */
     @Override
     protected String transformation(String text) {
         return this.expansion(text);
