@@ -12,7 +12,7 @@ public abstract class Decorator implements InterfaceTextTransformer {
     @Override
     final public String getTransformation(String text) {
         String new_text = this.transformation(text);
-        System.out.println("decorastor: " + text + " -> " + new_text);
+        System.out.println("decorator: " + text + " -> " + new_text);
         return transformer.getTransformation(new_text);
     }
 }

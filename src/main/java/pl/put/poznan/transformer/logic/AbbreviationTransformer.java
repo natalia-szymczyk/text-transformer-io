@@ -1,9 +1,5 @@
 package pl.put.poznan.transformer.logic;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class AbbreviationTransformer extends Decorator{
     public AbbreviationTransformer(InterfaceTextTransformer transformer) {
         super(transformer);
