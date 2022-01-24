@@ -13,5 +13,5 @@
 => mało spotkań
 
 ## Co powinniśmy zacząć robić:
-=> pisać komentarze\
+=> pisać komentarze (jeśli rzeczywiście potrzebne)\
 => organizować code review 
