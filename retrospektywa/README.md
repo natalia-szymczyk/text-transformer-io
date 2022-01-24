@@ -1,12 +1,12 @@
-RETROSPEKTYWA:
+# RETROSPEKTYWA:
 
-Co wyszło dobrze:
-=> systematyczność i sumienność
-=> podział pracy
-=> komunikacja
-=> pomaganie sobie z trudnościami
-=> trzymanie się deadline'ów
-=> dobra organizacja Scrum Mastera
+Co wyszło dobrze:\
+=> systematyczność i sumienność\
+=> podział pracy\
+=> komunikacja\
+=> pomaganie sobie z trudnościami\
+=> trzymanie się deadline'ów\
+=> dobra organizacja Scrum Mastera\
 
 Co wyszło źle:
 => brak komentarzy w kodzie
